@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-app-gke
+  description: testing gke deployment
+  annotations:
+    github.com/project-slug: ZensarIDP/test-app-gke
+    github.com/workflows: ci.yml
+    backstage.io/environments: 'dev,staging,prod'
+  tags:
+    - nodejs
+    - microservice
+    - gke
+    - kubernetes
+    - multi-environment
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/developers
+  system: test-app-gke-system
